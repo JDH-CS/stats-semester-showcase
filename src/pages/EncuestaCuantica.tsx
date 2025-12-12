@@ -13,6 +13,11 @@ import { FlaskConical, FileText, Database, Link as LinkIcon } from "lucide-react
  */
 
 const EncuestaCuantica = () => {
+  // URL al archivo Excel de la encuesta cuántica en el repositorio de GitHub. Utilizamos el visor de Office
+  // para embeber el libro. La URL se codifica para que el visor pueda acceder al recurso público.
+  const excelUrl =
+    "https://raw.githubusercontent.com/JDH-CS/stats-semester-showcase/main/public/excels/encuesta-cuantica.xlsx";
+
   return (
     <Layout>
       {/* Hero */}
@@ -120,10 +125,12 @@ const EncuestaCuantica = () => {
               </div>
             </CardHeader>
             <CardContent>
-              {/* Incrustamos el libro de Excel para mostrar todas las hojas y tablas */}
+              {/* Incrustamos el libro de Excel para mostrar todas las hojas y tablas utilizando Office Online */}
               <div className="w-full h-[600px]">
                 <iframe
-                  src="/excels/encuesta-cuantica.xlsx"
+                  src={`https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(
+                    excelUrl,
+                  )}`}
                   title="Encuesta sobre Computación Cuántica - Excel"
                   width="100%"
                   height="100%"
@@ -131,9 +138,8 @@ const EncuestaCuantica = () => {
                 />
               </div>
               <p className="text-xs text-muted-foreground mt-2">
-                Si el archivo no se muestra correctamente, verifica que el servidor permita
-                la visualización de archivos Excel o considera convertirlo a PDF para su
-                visualización.
+                El libro se visualiza mediante el visor en línea de Microsoft Office. Si el visor no carga,
+                intenta abrir el enlace en una nueva pestaña o descarga el archivo para revisarlo.
               </p>
             </CardContent>
           </Card>

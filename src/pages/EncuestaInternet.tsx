@@ -26,6 +26,11 @@ import { Globe, Database, BarChart2, FileText } from "lucide-react";
  */
 
 const EncuestaInternet = () => {
+  // URL al archivo Excel en el repositorio público de GitHub. Utilizamos el visor de Office
+  // para embeber el archivo en línea. El visor requiere que la URL esté codificada.
+  const excelUrl =
+    "https://raw.githubusercontent.com/JDH-CS/stats-semester-showcase/main/public/excels/puntos-acceso-internet.xlsx";
+
   return (
     <Layout>
       {/* Hero */}
@@ -82,10 +87,12 @@ const EncuestaInternet = () => {
               </div>
             </CardHeader>
             <CardContent>
-              {/* Incrustamos el libro de Excel para mostrar todas las hojas y tablas */}
+              {/* Incrustamos el libro de Excel para mostrar todas las hojas y tablas utilizando Office Online */}
               <div className="w-full h-[600px]">
                 <iframe
-                  src="/excels/puntos-acceso-internet.xlsx"
+                  src={`https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(
+                    excelUrl,
+                  )}`}
                   title="Puntos de Acceso a Internet - Excel"
                   width="100%"
                   height="100%"
@@ -93,8 +100,9 @@ const EncuestaInternet = () => {
                 />
               </div>
               <p className="text-xs text-muted-foreground mt-2">
-                Si el archivo no se muestra correctamente, verifique que el servidor permita la visualización
-                de archivos Excel o considere convertir el archivo a PDF para su visualización.
+                Para visualizar el archivo correctamente, el libro se muestra a través del visor online de
+                Microsoft Office. Si el visor no carga, intenta abrir el enlace en una nueva pestaña o
+                descargar el archivo.
               </p>
             </CardContent>
           </Card>

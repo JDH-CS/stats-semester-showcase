@@ -13,6 +13,11 @@ import { BarChart3, Database, BarChart2, FileText } from "lucide-react";
  */
 
 const EncuestaPanorama = () => {
+  // URL al archivo Excel del panorama digital en el repositorio de GitHub. Usamos el visor de Office
+  // para embeber el libro. La función encodeURIComponent codifica la URL para el visor.
+  const excelUrl =
+    "https://raw.githubusercontent.com/JDH-CS/stats-semester-showcase/main/public/excels/panorama-digital.xlsx";
+
   return (
     <Layout>
       {/* Hero */}
@@ -108,7 +113,9 @@ const EncuestaPanorama = () => {
             <CardContent>
               <div className="w-full h-[600px]">
                 <iframe
-                  src="/excels/panorama-digital.xlsx"
+                  src={`https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(
+                    excelUrl,
+                  )}`}
                   title="Panorama Digital - Excel"
                   width="100%"
                   height="100%"
@@ -116,8 +123,8 @@ const EncuestaPanorama = () => {
                 />
               </div>
               <p className="text-xs text-muted-foreground mt-2">
-                Si el archivo no se muestra correctamente, verifique que el servidor permita
-                la visualización de archivos Excel o considere convertir el archivo a PDF para su visualización.
+                Este libro se visualiza mediante el visor en línea de Microsoft Office. Si no se carga
+                adecuadamente, abre el enlace en una pestaña aparte o descarga el archivo para consultarlo.
               </p>
             </CardContent>
           </Card>
