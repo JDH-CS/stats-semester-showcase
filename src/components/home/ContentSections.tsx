@@ -49,7 +49,7 @@ const sections = [
     href: "/conceptos#bitacora",
   },
   {
-    title: "Encuesta: Puntos de Acceso a Internet",
+    title: "Análisis de Datos: Puntos de Acceso a Internet",
     description: "Análisis sobre la conectividad y acceso a internet en diferentes zonas de Panamá.",
     icon: Globe,
     href: "/encuestas/internet",
