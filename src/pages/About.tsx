@@ -89,7 +89,7 @@ const About = () => {
               Descripción del Proyecto
             </h2>
             <p className="text-muted-foreground font-body">
-              La plataforma <strong>Stats Semester Showcase</strong> surge como un portal académico para
+              La plataforma <strong>Probabilidad y Estadística FIEC 2025  </strong> surge como un portal académico para
               la visualización y difusión de los temas aprendidos durante el II semestre de 2025 en
               la asignatura de Estadística y Probabilidad. Su diseño destaca por la originalidad del
               nombre, la combinación armónica de colores y el uso de recursos multimedia que facilitan
