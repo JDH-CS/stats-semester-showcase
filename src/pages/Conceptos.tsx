@@ -87,7 +87,7 @@ const Conceptos = () => {
               <CardContent>
                 {section.id === "historia" ? (
                   <div className="space-y-8">
-                    {/* Primer PDF */}
+                    {/* Primer PDF: Historia y Fundamentos */}
                     <div className="w-full h-[500px]">
                       <iframe
                         src="/pdfs/historia-fundamentos-1.pdf#toolbar=0"
@@ -97,7 +97,7 @@ const Conceptos = () => {
                         className="rounded-md border"
                       />
                     </div>
-                    {/* Segundo PDF */}
+                    {/* Segundo PDF: Historia y Fundamentos */}
                     <div className="w-full h-[500px]">
                       <iframe
                         src="/pdfs/historia-fundamentos-2.pdf#toolbar=0"
@@ -117,6 +117,28 @@ const Conceptos = () => {
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
+                      />
+                    </div>
+                  </div>
+                ) : section.id === "variables" ? (
+                  <div className="space-y-8">
+                    {/* PDFs para Tipos de Variables y Artículos Científicos */}
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/variables-articulos-1.pdf#toolbar=0"
+                        title="Tipos de Variables y Artículos Científicos - Documento 1"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
+                      />
+                    </div>
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/variables-articulos-2.pdf#toolbar=0"
+                        title="Tipos de Variables y Artículos Científicos - Documento 2"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
                       />
                     </div>
                   </div>
