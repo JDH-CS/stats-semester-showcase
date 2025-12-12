@@ -33,15 +33,17 @@ const conceptSections = [
   },
   {
     id: "bitacora",
-    title: "Bitácora de Recolección de Datos",
+    title: "Investigación en Computación Cuántica",
     icon: ClipboardList,
-    placeholder: "Registro detallado del proceso de obtención y organización de datos.",
+    // Sección dedicada a la investigación en computación cuántica.
+    // Se muestra un solo PDF con un artículo o informe relacionado con el tema.
+    placeholder: "Artículo de investigación en computación cuántica.",
   },
   {
     id: "experiencias",
-    title: "Experiencias Determinísticas y Aleatorias",
+    title: "Experiencias y Eventos Determinísticos y Aleatorios",
     icon: Shuffle,
-    placeholder: "Análisis comparativo entre fenómenos predecibles y fenómenos aleatorios.",
+    placeholder: "Explora experiencias y eventos determinísticos y aleatorios.",
   },
 ];
 
@@ -136,6 +138,63 @@ const Conceptos = () => {
                       <iframe
                         src="/pdfs/variables-articulos-2.pdf#toolbar=0"
                         title="Tipos de Variables y Artículos Científicos - Documento 2"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
+                      />
+                    </div>
+                  </div>
+                ) : section.id === "ensayos" ? (
+                  <div className="space-y-8">
+                    {/* PDFs para Ensayos Académicos */}
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/ensayos-academicos-1.pdf#toolbar=0"
+                        title="Ensayos Académicos - Documento 1"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
+                      />
+                    </div>
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/ensayos-academicos-2.pdf#toolbar=0"
+                        title="Ensayos Académicos - Documento 2"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
+                      />
+                    </div>
+                  </div>
+                ) : section.id === "bitacora" ? (
+                  <div className="space-y-8">
+                    {/* PDF para Investigación en Computación Cuántica */}
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/investigacion-cuantica.pdf#toolbar=0"
+                        title="Investigación en Computación Cuántica"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
+                      />
+                    </div>
+                  </div>
+                ) : section.id === "experiencias" ? (
+                  <div className="space-y-8">
+                    {/* PDFs para Experiencias y Eventos Determinísticos y Aleatorios */}
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/experiencias-deterministicas-1.pdf#toolbar=0"
+                        title="Experiencias y Eventos Determinísticos y Aleatorios - Documento 1"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
+                      />
+                    </div>
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/experiencias-deterministicas-2.pdf#toolbar=0"
+                        title="Experiencias y Eventos Determinísticos y Aleatorios - Documento 2"
                         width="100%"
                         height="100%"
                         className="rounded-md border"

@@ -9,6 +9,7 @@ import Conceptos from "./pages/Conceptos";
 import Encuestas from "./pages/Encuestas";
 import EncuestaInternet from "./pages/EncuestaInternet";
 import EncuestaCuantica from "./pages/EncuestaCuantica";
+import EncuestaPanorama from "./pages/EncuestaPanorama";
 import Graficos from "./pages/Graficos";
 import NotFound from "./pages/NotFound";
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/encuestas" element={<Encuestas />} />
           <Route path="/encuestas/internet" element={<EncuestaInternet />} />
           <Route path="/encuestas/cuantica" element={<EncuestaCuantica />} />
+          <Route path="/encuestas/panorama" element={<EncuestaPanorama />} />
           <Route path="/graficos" element={<Graficos />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
