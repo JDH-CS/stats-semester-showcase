@@ -1,6 +1,16 @@
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+/**
+ * Versión modificada del componente HeroSection. El cambio principal
+ * corrige el estilo del botón "Conocer al Equipo" para que su texto
+ * sea visible incluso sin pasar el mouse encima. En la versión
+ * original, el botón utilizaba el variante "outline" con un
+ * color de texto blanco sobre fondo blanco, provocando que el
+ * texto fuera invisible hasta que el usuario hacía hover. Ahora
+ * empleamos el variante "secondary" del componente Button,
+ * que asigna un fondo azul claro y texto oscuro por defecto.
+ */
 export const HeroSection = () => {
   const scrollToContent = () => {
     const element = document.getElementById("contenido-principal");
@@ -10,11 +20,11 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
-      <div 
+      <div
         className="absolute inset-0 bg-gradient-to-br from-primary via-primary/90 to-primary/80"
         style={{ background: "var(--hero-gradient)" }}
       />
-      
+
       {/* Decorative Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-primary-foreground blur-3xl" />
@@ -29,25 +39,26 @@ export const HeroSection = () => {
               Universidad de Panamá · FIEC · II Semestre 2025
             </p>
           </div>
-          
-          <h1 
+
+          <h1
             className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-heading font-extrabold leading-tight animate-fade-in-up"
             style={{ animationDelay: "0.2s" }}
           >
             Probabilidad y Estadística
           </h1>
-          
-          <p 
+
+          <p
             className="text-lg md:text-xl lg:text-2xl font-body font-light opacity-90 max-w-2xl mx-auto animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
             Portal académico para la visualización y difusión de los temas aprendidos durante el semestre
           </p>
 
-          <div 
+          <div
             className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-6 animate-fade-in-up"
             style={{ animationDelay: "0.4s" }}
           >
+            {/* Botón de explorar contenido (sin cambios) */}
             <Button
               size="lg"
               variant="secondary"
@@ -56,10 +67,11 @@ export const HeroSection = () => {
             >
               Explorar Contenido
             </Button>
+            {/* Botón corregido para conocer al equipo */}
             <Button
               size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-heading font-semibold"
+              variant="secondary"
+              className="font-heading font-semibold"
               asChild
             >
               <a href="/about">Conocer al Equipo</a>
@@ -68,7 +80,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Scroll Indicator */}
-        <div 
+        <div
           className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
           onClick={scrollToContent}
         >
