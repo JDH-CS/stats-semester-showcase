@@ -2,6 +2,16 @@ import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { History, BookOpen, FileText, ClipboardList, Shuffle } from "lucide-react";
 
+/*
+ * Versión actualizada de la página Conceptos. Aquí se incorporan los
+ * materiales de la sección "Historia y Fundamentos de la Probabilidad":
+ * dos PDFs y un video de YouTube. Para esa sección, en lugar del texto
+ * de marcador de posición se muestran iframes que cargan los PDFs
+ * desde la carpeta public/pdfs y el video embebido desde YouTube. El
+ * resto de las secciones permanece con su texto provisional hasta que
+ * se añada contenido.
+ */
+
 const conceptSections = [
   {
     id: "historia",
@@ -44,7 +54,10 @@ const Conceptos = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 animate-fade-in-up">
             Conceptos Estadísticos
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p
+            className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
             Fundamentos teóricos y conceptuales del curso de Probabilidad y Estadística
           </p>
         </div>
@@ -72,9 +85,46 @@ const Conceptos = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground font-body italic">
-                  [Contenido pendiente - {section.placeholder}]
-                </p>
+                {section.id === "historia" ? (
+                  <div className="space-y-8">
+                    {/* Primer PDF */}
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/historia-fundamentos-1.pdf#toolbar=0"
+                        title="Historia y Fundamentos de la Probabilidad - Parte 1"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
+                      />
+                    </div>
+                    {/* Segundo PDF */}
+                    <div className="w-full h-[500px]">
+                      <iframe
+                        src="/pdfs/historia-fundamentos-2.pdf#toolbar=0"
+                        title="Historia y Fundamentos de la Probabilidad - Parte 2"
+                        width="100%"
+                        height="100%"
+                        className="rounded-md border"
+                      />
+                    </div>
+                    {/* Video embebido de YouTube */}
+                    <div className="aspect-video">
+                      <iframe
+                        width="100%"
+                        height="100%"
+                        src="https://www.youtube.com/embed/bltIAEJ8x8s"
+                        title="Historia y Fundamentos de la Probabilidad"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <p className="text-muted-foreground font-body italic">
+                    [Contenido pendiente - {section.placeholder}]
+                  </p>
+                )}
               </CardContent>
             </Card>
           ))}
