@@ -1,22 +1,39 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, FlaskConical, ArrowRight } from "lucide-react";
+import { Globe, FlaskConical, Database, ArrowRight } from "lucide-react";
+
+/*
+ * Página de listados de encuestas modificada para incluir la encuesta
+ * sobre el panorama digital de la Universidad de Panamá. Se mantiene
+ * el diseño original y se añade un nuevo objeto al arreglo de encuestas
+ * que redirige a la ruta `/encuestas/panorama`.
+ */
 
 const surveys = [
   {
     id: "internet",
     title: "Puntos de Acceso a Internet en Panamá",
-    description: "Análisis sobre la conectividad y acceso a internet en diferentes zonas de Panamá.",
+    description:
+      "Análisis sobre la conectividad y acceso a internet en diferentes zonas de Panamá.",
     icon: Globe,
     href: "/encuestas/internet",
   },
   {
     id: "cuantica",
     title: "Computación Cuántica en Panamá",
-    description: "Estudio sobre el conocimiento e impacto de la computación cuántica en la población panameña.",
+    description:
+      "Estudio sobre el conocimiento e impacto de la computación cuántica en la población panameña.",
     icon: FlaskConical,
     href: "/encuestas/cuantica",
+  },
+  {
+    id: "panorama",
+    title: "Panorama Digital de la Universidad de Panamá",
+    description:
+      "Accesibilidad y utilización del internet (encuesta).",
+    icon: Database,
+    href: "/encuestas/panorama",
   },
 ];
 
@@ -29,7 +46,10 @@ const Encuestas = () => {
           <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4 animate-fade-in-up">
             Encuestas Realizadas
           </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
+          <p
+            className="text-lg text-muted-foreground max-w-2xl mx-auto animate-fade-in-up"
+            style={{ animationDelay: "0.1s" }}
+          >
             Investigaciones de campo realizadas durante el curso
           </p>
         </div>
