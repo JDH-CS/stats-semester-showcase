@@ -49,10 +49,13 @@ const sections = [
     href: "/conceptos#bitacora",
   },
   {
+    // Tarjeta para el análisis de los puntos de acceso a internet. Cambiamos el título para reflejar que
+    // se trata de un análisis de datos. El enlace apunta a la página de encuestas con ancla para mostrar
+    // esta sección dentro de la misma página.
     title: "Análisis de Datos: Puntos de Acceso a Internet",
     description: "Análisis sobre la conectividad y acceso a internet en diferentes zonas de Panamá.",
     icon: Globe,
-    href: "/encuestas/internet",
+    href: "/encuestas#internet",
   },
   {
     // Actualizamos esta tarjeta para que represente la nueva encuesta del panorama digital.
