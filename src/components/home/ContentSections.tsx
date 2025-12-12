@@ -13,6 +13,15 @@ import {
 } from "lucide-react";
 import { SectionCard } from "./SectionCard";
 
+/*
+ * Versión modificada de la sección de contenido principal.
+ *
+ * Se actualiza el título y el enlace de la tarjeta de "Datos Reales: Conectividad y Consumo"
+ * para que apunte a la nueva página "Panorama Digital de la Universidad de Panamá". También
+ * se adapta la descripción para reflejar el objetivo de evaluar la accesibilidad y
+ * utilización del internet por los estudiantes.
+ */
+
 const sections = [
   {
     title: "Historia y Fundamentos de la Probabilidad",
@@ -33,10 +42,11 @@ const sections = [
     href: "/conceptos#ensayos",
   },
   {
+    // Ajustamos esta tarjeta para que dirija a la sección de conceptos, donde se encuentra el artículo de investigación.
     title: "Investigación en Computación Cuántica",
     description: "Estudio sobre el impacto y conocimiento de la computación cuántica en Panamá.",
     icon: FlaskConical,
-    href: "/encuestas/cuantica",
+    href: "/conceptos#bitacora",
   },
   {
     title: "Encuesta: Puntos de Acceso a Internet",
@@ -45,10 +55,11 @@ const sections = [
     href: "/encuestas/internet",
   },
   {
-    title: "Datos Reales: Conectividad y Consumo",
-    description: "Información recopilada sobre patrones de uso y consumo de servicios de internet.",
+    // Actualizamos esta tarjeta para que represente la nueva encuesta del panorama digital.
+    title: "Panorama Digital de la Universidad de Panamá: Accesibilidad y Utilización del Internet (encuesta)",
+    description: "Evaluación sobre la accesibilidad y utilización del internet por los estudiantes de la Universidad de Panamá.",
     icon: Database,
-    href: "/encuestas/internet#datos",
+    href: "/encuestas/panorama",
   },
   {
     title: "Gráficos Estadísticos del Empleo (INEC)",
@@ -57,14 +68,15 @@ const sections = [
     href: "/graficos",
   },
   {
-    title: "Bitácora de Recolección de Datos",
-    description: "Registro detallado del proceso de obtención y organización de datos.",
+    // Renombramos la bitácora para que represente la encuesta sobre computación cuántica.
+    title: "Encuesta sobre Computación Cuántica",
+    description: "Encuesta sobre el conocimiento e interés en computación cuántica y su análisis estadístico.",
     icon: ClipboardList,
-    href: "/conceptos#bitacora",
+    href: "/encuestas/cuantica",
   },
   {
-    title: "Experiencias Determinísticas y Aleatorias",
-    description: "Análisis comparativo entre fenómenos predecibles y fenómenos aleatorios.",
+    title: "Experiencias y Eventos Determinísticos y Aleatorios",
+    description: "Explora eventos determinísticos frente a sucesos aleatorios a través de casos prácticos.",
     icon: Shuffle,
     href: "/conceptos#experiencias",
   },

@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Conceptos from "./pages/Conceptos";
 import Encuestas from "./pages/Encuestas";
-import EncuestaInternet from "./pages/EncuestaInternet";
+import EncuestaInternet from "./pages/EncuestaPanorama";
 import EncuestaCuantica from "./pages/EncuestaCuantica";
 import EncuestaPanorama from "./pages/EncuestaPanorama";
 import Graficos from "./pages/Graficos";
