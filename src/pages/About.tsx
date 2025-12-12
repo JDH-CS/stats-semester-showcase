@@ -114,16 +114,6 @@ const About = () => {
             </p>
           </div>
 
-          {/* Fuentes Bibliográficas */}
-          <div className="bg-card rounded-lg border border-border p-8">
-            <h2 className="text-2xl font-heading font-bold text-foreground mb-4">
-              Fuentes Bibliográficas
-            </h2>
-            <p className="text-muted-foreground font-body italic">
-              [Contenido pendiente - Espacio reservado para las fuentes primarias y secundarias]
-            </p>
-          </div>
-
           {/* Metodología */}
           <div className="bg-card rounded-lg border border-border p-8">
             <h2 className="text-2xl font-heading font-bold text-foreground mb-4">
